@@ -1,0 +1,203 @@
+
+@media (min-width: 1366px) {
+	.container {
+		max-width: 1366px !important;
+	}
+}
+
+.container {
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}
+
+.display-none {
+	display: none;
+}
+
+.float-left {
+	float: left;
+}
+
+.float-right {
+	float: right;
+}
+
+.text-align-left {
+	text-align: left;
+}
+
+.text-align-right {
+	text-align: right;
+}
+
+.text-align-center {
+	text-align: center;
+}
+
+.padding-left-right-0 {
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}
+
+.hero-section {
+	background: url('../images/hero-image.png');
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+}
+
+.header-initial {
+	padding-top: 30px;
+}
+
+.logo-holder span {
+	color: white;
+}
+
+.logo-holder span#keastone {
+	font-size: 25px;
+}
+
+.logo-holder span#careers {
+	font-size: 15px;
+	text-transform: lowercase;
+}
+
+.links-holder a {
+	font-size: 18px;
+	color: white;
+	text-transform: uppercase;
+	text-decoration: none !important;
+}
+
+.links-holder a:hover {
+	color: white;
+	text-decoration: none !important;
+}
+
+.padding-right-link {
+	padding-right: 15px;
+}
+
+.divider {
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+
+.divider p {
+	font-size: 30px;
+	color: gray;
+}
+
+.first-content, .second-content {
+	width: 90%;
+	padding: 40px;
+	background-color: #f7f7f7;
+}
+
+.second-content {
+	float: right;
+}
+
+.first-content p, .second-content p {
+	font-size: 17px;
+}
+
+.footer {
+	margin-top: 30px;
+	color: white;
+	background-color: black;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.openings-section .opening {
+	padding: 15px;
+	width: 100%;
+    display: inline-block;
+	/*border-bottom: 1px solid #ccc;*/
+}
+
+.opening-holder {
+	/*cursor: pointer;*/
+}
+
+
+.opening .title {
+	font-size: 20px;
+}
+
+.opening .description {
+	font-size: 17px;
+	padding-bottom: 20px;
+}
+
+
+
+.ghost-button {
+  display: inline-block;
+  width: 200px;
+  padding: 8px;
+  color: lightgray;
+  border: 1px solid lightgray;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  transition: background-color 0.2s ease-out,
+              color 0.2s ease-out;
+}
+
+.ghost-button:hover,
+.ghost-button:active {
+	text-decoration: none !important;
+  	/*background-color: #fff;*/
+  	color: #000;
+  	transition: background-color 0.3s ease-in,
+    color 0.3s ease-in;
+    border: 2px solid #ccc;
+}
+
+.form-holder {
+	width: 50%;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	margin-right: auto;
+	height: auto;
+	padding: 10px;
+}
+
+.form-holder label, .form-holder input {
+	width: 100%;
+}
+
+.form-holder input {
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+.form-holder button {
+	margin-top: 10px;
+	background-color: transparent;
+}
+
+.arrow {
+	display: block;
+	text-align: center;
+}
+
+.arrow-image {
+	width: 20px;
+	height: 12px;
+}
+
+.down-arrow {
+	-ms-transform: rotate(180deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+}
+
+.up-arrow {
+
+}
+
+

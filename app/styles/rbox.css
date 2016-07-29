@@ -1,0 +1,648 @@
+.rbox-widget {
+    margin-bottom: 1em;
+
+
+
+}
+
+    /**************
+     * Typography *
+     **************/
+
+.rbox-widget h1,
+.rbox-widget h2,
+.rbox-widget h3,
+.rbox-widget h4,
+.rbox-widget h5,
+.rbox-widget h6 {
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+.rbox-widget h1 {
+    font-size: 2em;
+    line-height: 1.6em;
+}
+.rbox-widget h2 {
+    font-size: 1.7em;
+    line-height: 1.6em;
+}
+.rbox-widget h3 {
+    font-size: 1.3em;
+    line-height: 1.6em;
+}
+.rbox-widget h4,
+.rbox-widget h5,
+.rbox-widget h6 {
+    font-size: 1em;
+    line-height: 1.6em;
+}
+
+    /*********
+     * Forms *
+     *********/
+
+.rbox-widget button,
+.rbox-widget input,
+.rbox-widget select,
+.rbox-widget textarea {
+    margin: 0;
+    font-size: 100%;
+    vertical-align: middle;
+}
+.rbox-widget button,
+.rbox-widget input {
+    *overflow: visible;
+    line-height: normal;
+}
+.rbox-widget button::-moz-focus-inner,
+.rbox-widget input::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+.rbox-widget textarea {
+    height: 80px;
+    overflow: auto;
+    vertical-align: top;
+}
+.rbox-widget fieldset {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+.rbox-widget select,
+.rbox-widget textarea,
+.rbox-widget input {
+    display: inline-block;
+    padding: 4px;
+    margin-bottom: 9px;
+}
+.rbox-widget input,
+.rbox-widget textarea {
+    width: 300px;
+}
+.rbox-widget input[type="number"],
+.rbox-widget .rbox-date-field {
+    width: 200px;
+}
+.rbox-widget textarea,
+.rbox-widget input[type="text"],
+.rbox-widget input[type="password"],
+.rbox-widget input[type="datetime"],
+.rbox-widget input[type="datetime-local"],
+.rbox-widget input[type="date"],
+.rbox-widget input[type="month"],
+.rbox-widget input[type="time"],
+.rbox-widget input[type="week"],
+.rbox-widget input[type="number"],
+.rbox-widget input[type="email"],
+.rbox-widget input[type="url"],
+.rbox-widget input[type="search"],
+.rbox-widget input[type="tel"],
+.rbox-widget input[type="color"] {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border linear .2s, box-shadow linear .2s;
+    -moz-transition: border linear .2s, box-shadow linear .2s;
+    -ms-transition: border linear .2s, box-shadow linear .2s;
+    -o-transition: border linear .2s, box-shadow linear .2s;
+    transition: border linear .2s, box-shadow linear .2s;
+}
+.rbox-widget textarea:focus,
+.rbox-widget input[type="text"]:focus,
+.rbox-widget input[type="password"]:focus,
+.rbox-widget input[type="datetime"]:focus,
+.rbox-widget input[type="datetime-local"]:focus,
+.rbox-widget input[type="date"]:focus,
+.rbox-widget input[type="month"]:focus,
+.rbox-widget input[type="time"]:focus,
+.rbox-widget input[type="week"]:focus,
+.rbox-widget input[type="number"]:focus,
+.rbox-widget input[type="email"]:focus,
+.rbox-widget input[type="url"]:focus,
+.rbox-widget input[type="search"]:focus,
+.rbox-widget input[type="tel"]:focus,
+.rbox-widget input[type="color"]:focus {
+    border-color: rgba(82, 168, 236, 0.8);
+    outline: 0;
+    outline: thin dotted \9;
+    /* IE6-9 */
+
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
+    -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
+}
+.rbox-widget input[type="radio"],
+.rbox-widget input[type="checkbox"] {
+    width: auto;
+    margin: 3px 3px 3px 0;
+    *margin-top: 0;
+    /* IE7 */
+
+    line-height: normal;
+    cursor: pointer;
+}
+.rbox-widget .rbox-field-label {
+    display: inline-block;
+    padding-top: 5px;
+}
+.rbox-widget .rbox-checkbox-label {
+    display: inline-block;
+    margin-right: 10px;
+}
+.rbox-widget .rbox-error-msg {
+    display: inline-block;
+    padding-left: 5px;
+    vertical-align: middle;
+    font-weight: normal;
+}
+.rbox-widget .rbox-field-wrapper {
+    margin-bottom: 10px;
+}
+.rbox-widget .rbox-field-wrapper.rbox-error .rbox-error-msg {
+    color: #b94a48;
+}
+.rbox-widget .rbox-field-wrapper.rbox-error input,
+.rbox-widget .rbox-field-wrapper.rbox-error select,
+.rbox-widget .rbox-field-wrapper.rbox-error textarea {
+    color: #b94a48;
+    border-color: #b94a48;
+}
+.rbox-widget .rbox-field-wrapper.rbox-error input:focus,
+.rbox-widget .rbox-field-wrapper.rbox-error select:focus,
+.rbox-widget .rbox-field-wrapper.rbox-error textarea:focus {
+    border-color: #953b39;
+    -webkit-box-shadow: 0 0 6px #d59392;
+    -moz-box-shadow: 0 0 6px #d59392;
+    box-shadow: 0 0 6px #d59392;
+}
+.rbox-widget .rbox-form-actions {
+    padding-top: 20px;
+}
+
+    /***********
+     * Buttons *
+     ***********/
+
+.rbox-widget .rbox-btn {
+    display: inline-block;
+    *display: inline;
+    /* IE7 inline-block hack */
+
+    *zoom: 1;
+    padding: 4px 10px 4px;
+    margin-bottom: 0;
+    font-size: 1em;
+    line-height: 1.5em;
+    *line-height: 20px;
+    color: #000000;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #f5f5f5;
+    background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+    background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: linear-gradient(top, #ffffff, #e6e6e6);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
+    border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    *background-color: #e6e6e6;
+    /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+    border: 1px solid #cccccc;
+    *border: 0;
+    border-bottom-color: #b3b3b3;
+    border-color: rgba(0, 0, 0, 0.25) rgba(0, 0, 0, 0.25) rgba(0, 0, 0, 0.4);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    *margin-left: .3em;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+    -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+}
+.rbox-widget .rbox-btn:hover,
+.rbox-widget .rbox-btn:active,
+.rbox-widget .rbox-btn[disabled] {
+    background-color: #e6e6e6;
+    *background-color: #d9d9d9;
+}
+.rbox-widget .rbox-btn:active {
+    background-color: #cccccc \9;
+}
+.rbox-widget .rbox-btn:first-child {
+    *margin-left: 0;
+}
+.rbox-widget .rbox-btn:focus,
+.rbox-widget .rbox-btn:hover {
+    color: #333333;
+    text-decoration: none;
+    background-color: #e6e6e6;
+    *background-color: #d9d9d9;
+    /* Buttons in IE7 don't get borders, so darken on hover */
+
+    background-position: 0 -15px;
+    -webkit-transition: background-position 0.1s linear;
+    -moz-transition: background-position 0.1s linear;
+    -ms-transition: background-position 0.1s linear;
+    -o-transition: background-position 0.1s linear;
+    transition: background-position 0.1s linear;
+}
+.rbox-widget .rbox-btn:active {
+    background-color: #e6e6e6;
+    background-color: #d9d9d9 \9;
+    background-image: none;
+    outline: 0;
+    -webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
+    -moz-box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
+    box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
+}
+.rbox-widget .rbox-btn[disabled] {
+    cursor: default;
+    background-color: #e6e6e6;
+    background-image: none;
+    opacity: 0.65;
+    filter: alpha(opacity=65);
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+.rbox-widget button.rbox-btn,
+.rbox-widget input[type="submit"].rbox-btn {
+    *padding-top: 2px;
+    *padding-bottom: 2px;
+}
+.rbox-widget .rbox-hide {
+    display: none;
+}
+
+.rbox-application-form {
+    display: none;
+    margin-top: 20px;
+    border-top: 1px solid #eeeeee;
+}
+.rbox-application-form fieldset {
+    padding-top: 20px;
+}
+.rbox-application-form input[type="file"] {
+    width: auto;
+}
+
+    /********
+     * List *
+     ********/
+
+.rbox-opening-li {
+    padding: 10px 0;
+    border-bottom: 1px dotted rgba(127, 127, 127, 0.2);
+    border-top: 1px dotted rgba(127, 127, 127, 0.2);
+    *border-bottom-color: #ccc;
+    *border-top-color: #ccc;
+}
+.rbox-opening-li + .rbox-opening-li {
+    border-top: 0 none;
+}
+.rbox-opening-li a {
+    text-decoration: none;
+}
+.rbox-opening-li:hover,
+.rbox-opening-li.rbox-opening-li-selected {
+    border-bottom-style: solid;
+    cursor: pointer !important;
+}
+.rbox-opening-li:hover a,
+.rbox-opening-li.rbox-opening-li-selected a {
+    text-decoration: underline;
+}
+.rbox-opening-li:hover .rbox-job-shortdesc,
+.rbox-opening-li.rbox-opening-li-selected .rbox-job-shortdesc {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+.rbox-opening-li-title {
+    font-size: 1.2em;
+    line-height: 1.2em;
+    font-weight: bold;
+}
+.rbox-job-title {
+    border: 0 none;
+}
+.rbox-job-shortdesc {
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    font-weight: normal;
+}
+.rbox-job-fullpage .rbox-buttons {
+    margin-top: 30px;
+}
+.rbox-job-longdesc {
+    min-height: 22px; // Height of the preloader gif
+    margin-top: 10px;
+    padding-top: 20px;
+    border-top: 1px solid #eeeeee;
+    /* Make h1 and h2 inside job desc to look like normal h3 and h4 respectively */
+
+}
+.rbox-job-longdesc p {
+    margin-bottom: 1em;
+}
+.rbox-job-longdesc h1 {
+    font-size: 1.3em;
+    line-height: 1.6em;
+}
+.rbox-job-longdesc h2 {
+    font-size: 1em;
+    line-height: 1.6em;
+}
+.rbox-job-longdesc h3,
+.rbox-job-longdesc h4,
+.rbox-job-longdesc h5,
+.rbox-job-longdesc h6 {
+    font-size: 1em;
+    line-height: 1.6em;
+}
+.rbox-top-links {
+    margin-bottom: 20px;
+}
+.rbox-bottom-links {
+    margin-top: 20px;
+}
+/*!
+ * Datepicker for Bootstrap
+ *
+ * Copyright 2012 Stefan Petre
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ */
+.rbox-datepicker.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 4px 0;
+    margin: 1px 0 0;
+    list-style: none;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    *border-right-width: 2px;
+    *border-bottom-width: 2px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+}
+.rbox-datepicker [class^="icon-"]:last-child,
+.rbox-datepicker [class*=" icon-"]:last-child {
+    *margin-left: 0;
+}
+.rbox-datepicker .icon-arrow-left {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAQAAAC1QeVaAAAAAXNSR0IArs4c6QAAAAJiS0dEAP+Hj8y/AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAiUlEQVQY02NgoDWQlJc8j0vKX+6D3n9UMSaoVD/HBmF+VjQNjAwMkvIMG/gNuBkYGBgYniFJPWdkZGCQeyAgz4rForOMTAwMFbUCd7C7g5GB4T/PeZP68mceDAwMDGcckaQOMDAwMDD8Z/mvUdBu9tn4Pw6v/JeYlWB3G2cg/Oc554AnjP6zoPIBzeMd9YjtWegAAAAASUVORK5CYII=);
+    background-position: 0 0;
+}
+.rbox-datepicker .icon-arrow-right {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAQAAAC1QeVaAAAAAXNSR0IArs4c6QAAAAJiS0dEAP+Hj8y/AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAiklEQVQY02NgoAeQPC8pj1NS77/cB0l/GI8JVZKVQZifY4NkP4THyMAg+R8hKcXAwMDA8JXh4wWGgOcPGRkYjP9jGv+b4cPDRwpM2O0WuFNRy8DAyMDw3wEhaLKfgYGBQWpHY6fhGcYvaDqM/5t9Lmj/r/GfBYtxdrdnJfyXwOHPcw7/eXAGAqpxAIK1I/WSwx0JAAAAAElFTkSuQmCC);
+    background-position: 0 0;
+}
+.rbox-datepicker {
+    top: 0;
+    left: 0;
+    width: auto;
+    padding: 4px;
+    margin-top: 1px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    /*.dow {
+		border-top: 1px solid #ddd !important;
+	}*/
+
+}
+.rbox-datepicker:before {
+    content: '';
+    display: inline-block;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #ccc;
+    border-bottom-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: -7px;
+    left: 6px;
+}
+.rbox-datepicker:after {
+    content: '';
+    display: inline-block;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid #ffffff;
+    position: absolute;
+    top: -6px;
+    left: 7px;
+}
+.rbox-datepicker > div {
+    display: none;
+}
+.rbox-datepicker.days div.datepicker-days {
+    display: block;
+}
+.rbox-datepicker.months div.datepicker-months {
+    display: block;
+}
+.rbox-datepicker.years div.datepicker-years {
+    display: block;
+}
+.rbox-datepicker table {
+    margin: 0;
+}
+.rbox-datepicker tr,
+.rbox-datepicker td,
+.rbox-datepicker th {
+    background-color: transparent;
+}
+.rbox-datepicker table,
+.rbox-datepicker tr,
+.rbox-datepicker td,
+.rbox-datepicker th {
+    border: 0 none;
+}
+.rbox-datepicker td,
+.rbox-datepicker th {
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.rbox-datepicker td.day:hover {
+    background: #eeeeee;
+    cursor: pointer;
+}
+.rbox-datepicker td.old,
+.rbox-datepicker td.new {
+    color: #999999;
+}
+.rbox-datepicker td.active,
+.rbox-datepicker td.active:hover {
+    background-color: #006dcc;
+    background-image: -moz-linear-gradient(top, #0088cc, #0044cc);
+    background-image: -ms-linear-gradient(top, #0088cc, #0044cc);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0044cc));
+    background-image: -webkit-linear-gradient(top, #0088cc, #0044cc);
+    background-image: -o-linear-gradient(top, #0088cc, #0044cc);
+    background-image: linear-gradient(top, #0088cc, #0044cc);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088cc', endColorstr='#0044cc', GradientType=0);
+    border-color: #0044cc #0044cc #002a80;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    *background-color: #0044cc;
+    /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+.rbox-datepicker td.active:hover,
+.rbox-datepicker td.active:hover:hover,
+.rbox-datepicker td.active:active,
+.rbox-datepicker td.active:hover:active,
+.rbox-datepicker td.active.active,
+.rbox-datepicker td.active:hover.active,
+.rbox-datepicker td.active.disabled,
+.rbox-datepicker td.active:hover.disabled,
+.rbox-datepicker td.active[disabled],
+.rbox-datepicker td.active:hover[disabled] {
+    background-color: #0044cc;
+    *background-color: #003bb3;
+}
+.rbox-datepicker td.active:active,
+.rbox-datepicker td.active:hover:active,
+.rbox-datepicker td.active.active,
+.rbox-datepicker td.active:hover.active {
+    background-color: #003399 \9;
+}
+.rbox-datepicker td span {
+    display: block;
+    width: 47px;
+    height: 54px;
+    line-height: 54px;
+    float: left;
+    margin: 2px;
+    cursor: pointer;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.rbox-datepicker td span:hover {
+    background: #eeeeee;
+}
+.rbox-datepicker td span.active {
+    background-color: #006dcc;
+    background-image: -moz-linear-gradient(top, #0088cc, #0044cc);
+    background-image: -ms-linear-gradient(top, #0088cc, #0044cc);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0044cc));
+    background-image: -webkit-linear-gradient(top, #0088cc, #0044cc);
+    background-image: -o-linear-gradient(top, #0088cc, #0044cc);
+    background-image: linear-gradient(top, #0088cc, #0044cc);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088cc', endColorstr='#0044cc', GradientType=0);
+    border-color: #0044cc #0044cc #002a80;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    *background-color: #0044cc;
+    /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+.rbox-datepicker td span.active:hover,
+.rbox-datepicker td span.active:active,
+.rbox-datepicker td span.active.active,
+.rbox-datepicker td span.active.disabled,
+.rbox-datepicker td span.active[disabled] {
+    background-color: #0044cc;
+    *background-color: #003bb3;
+}
+.rbox-datepicker td span.active:active,
+.rbox-datepicker td span.active.active {
+    background-color: #003399 \9;
+}
+.rbox-datepicker td span.old {
+    color: #999999;
+}
+.rbox-datepicker th.switch {
+    width: 145px;
+}
+.rbox-datepicker thead tr:first-child th {
+    cursor: pointer;
+}
+.rbox-datepicker thead tr:first-child th:hover {
+    background: #eeeeee;
+}
+.rbox-datepicker .input-append.date .add-on i,
+.rbox-datepicker .input-prepend.date .add-on i {
+    display: block;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+}
+.rbox-opening-position-info {
+    margin-top: 5px;
+}
+.rbox-opening-position-type {
+    margin-right: 5px;
+}
+.rbox-opening-position-type, .rbox-opening-allows-remote {
+    border: 1px solid #ccc;
+    padding: 3px 5px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.rbox-opening-detail .rbox-opening-position-info {
+    margin-bottom: 5px;
+}
+
+.rbox-jobs-group+.rbox-jobs-group {
+    margin-top: 1.5em;
+}
+
+    /********
+     * Alert *
+     ********/
+
+.rbox-done {
+  padding: 40px 20px;
+  margin: 20px 0;
+  border-radius: 4px;
+  border: 1px solid #d6e9c6;
+  background-color: #dff0d8;
+  color: #3c763d;
+  }
+
+.rbox-text-muted {
+  opacity: .6;
+  filter: alpha(opacity=65);
+}

@@ -1,0 +1,150 @@
+<div class='header-on-scroll display-none'>
+  </div>
+
+  <div class='hero-section'>
+    <div class='header-initial'>
+      <div class='container'>
+        <div class='float-left logo-holder'>
+          <span id='keastone'>
+            Keastone
+          </span>
+          <span id='careers'>
+            Careers
+          </span>
+        </div>
+        <div class='float-right links-holder'>
+          <a href='javascript:void(0);' id='whywe' class='padding-right-link'>Why we</a>
+          <a href='javascript:void(0);' id='toOpenings' >Openings</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class='divider'>
+    <p class='text-align-center why-we' id='why-we-section'>
+      Why we
+    </p>
+  </div>
+
+  <div class='why-we-content'>
+    <div class='container'>
+      <div class='col-lg-6 col-md-6 col-sm-12 col-xs-12'>
+        <div class='first-content'>
+          <p>
+            We are building a universal information 
+            management platorm that brings all of your
+            digital information into one place and 
+            gives you access to privileged power.
+          </p>
+        </div>
+      </div>
+      <!-- <div class='col-lg-2 col-md-2 hidden-sm hidden-xs'> -->
+      <!-- </div> -->
+      <div class='col-lg-6 col-md-6 col-sm-12 col-xs-12'>
+        <div class='second-content'>
+          <p>
+            We not just execute the mechanics 
+            of our roles, but to execute our roles
+            in such a way so as to deliver a 
+            "better experience" to the beneficiaries
+            of our efforts.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id='openings' class='divider'>
+    <div class='container'>
+      <p class='text-align-center'>
+        Openings
+      </p>
+    </div>
+  </div>
+
+  <div id='openings-sections' class='openings-section'>
+    <div class='container'>
+      <div id='opening-holder' ng-repeat = 'opening in positions' class='opening-holder'>
+          <div>
+            <div class='opening'>
+              <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12'>
+                <div class='float-left'>
+                  <p class='title'>
+                    {{opening.title}}
+                  </p>
+                </div>
+                <div class='float-right'>
+                  <a class='ghost-button' ng-click="active = !active" ng-href='javascript:void(0);' ng-class="{'expandcollapse-heading-collapsed': active, 'expandcollapse-heading-expanded': !active}">Apply</a>
+                </div>
+              </div>
+              <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12'>
+                <div class="slideDown float-left" ng-hide="active">
+                  <div class="expand-collapse-content padding-left-right-0 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <p class='experience' ng-bind-html='opening.description'>
+                    </p>
+                  </div>
+
+                  <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 padding-left-right-0'>
+                    <div class='form-holder'>
+                      <form name='submit-form' ng-submit='apply(opening.id);'>
+                        <label>First Name</label>
+                        <input type='text' ng-model='user.firstname' required/>
+                        <label>Last Name </label>
+                        <input type='text' ng-model='user.lastname' required/>
+                        <label>Email </label>
+                        <input type='text' ng-model='user.email' required/>
+                        <label>Phone</label>
+                        <input type='text' ng-model='user.contact' required/>
+                        <label>Resume </label>
+                        <input type="file" id='resume' class="form-control" custom-on-change="uploadFile" ng-model='user.resume' name="resume" base-sixty-four-input required>
+                        <button  class='ghost-button'>Apply</button>
+                      <form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a ng-click="active = !active" ng-href='javascript:void(0);' ng-class="{'expandcollapse-heading-collapsed': active, 'expandcollapse-heading-expanded': !active}" class='display-none arrow'>
+              <img class='down-arrow arrow-image' src='./images/arrow.png'/>
+            </a>
+          </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <div class='footer'>
+    <div class='container'>
+      <div class='col-lg-4 col-md-4 col-sm-4 col-xs-12'>
+        <h3>
+        Mail
+        </h3>
+        <p>
+        kslcareers@keastone.com
+        </p>
+        <p>
+        info@keastone.com
+        </p>
+      </div>
+      <div class='col-lg-4 col-md-4 col-sm-4 col-xs-12'>
+        <h3>
+        Web
+        </h3>
+        <p>
+        www.keastone.com
+        </p>
+      </div>
+      <div class='col-lg-4 col-md-4 col-sm-4 col-xs-12'>
+        <h3>
+        Address
+        </h3>
+        <p>
+        Keastone Software Labs
+        1154, 12th Main Road,
+        Indra Nagar, HAL 2nd Stage,
+        Bengaluru, Karnataka,
+        Pin: 560038
+        India
+      </div>
+    </div>
+  </div>
