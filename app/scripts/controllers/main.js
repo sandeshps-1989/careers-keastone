@@ -36,21 +36,21 @@ angular.module('careersYeomanApp')
 		})
 		.success(function (data, status, headers, config) {
 			console.log(data);
-			data.objects.forEach(function (record) {
-				// console.log(record);
-				var str = record.description;
-				// console.log(str);
-				var index = str.indexOf('2016!')+5;
-			    // var index = str.substring(str.indexOf('IRIIIS will be'), str.indexOf('2016!'));
-			    // console.log(str.substr(c));
-			    record.description = str.substr(index);
-			    // console.log(record);
-			    dataArray.push(record);
-			    console.log(dataArray);
+			// data.objects.forEach(function (record) {
+			// 	// console.log(record);
+			// 	var str = record.description;
+			// 	// console.log(str);
+			// 	var index = str.indexOf('2016!')+5;
+			//     // var index = str.substring(str.indexOf('IRIIIS will be'), str.indexOf('2016!'));
+			//     // console.log(str.substr(c));
+			//     record.description = str.substr(index);
+			//     // console.log(record);
+			//     dataArray.push(record);
+			//     console.log(dataArray);
 
-			});
-			// $scope.positions = data.objects;
-			$scope.positions = dataArray;
+			// });
+			$scope.positions = data.objects;
+			// $scope.positions = dataArray;
 		})
 		.error(function (data, status, headers, config) {
 			console.log(data);
