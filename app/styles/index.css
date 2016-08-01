@@ -50,12 +50,39 @@
 	padding-top: 30px;
 }
 
+.header-on-scroll {
+	position: fixed;
+    width: 100%;
+    height: 60px;
+    z-index: 10000;
+    background: white;
+}
+
+.header-on-scroll #keastone, .header-on-scroll #careers, .header-on-scroll .links-holder a {
+	color: gray;
+}
+
+
+.header-on-scroll .links-holder {
+	padding-top: 22px;
+}
+
+.header-on-scroll .links-holder a:hover {
+	color: gray !important;
+}
+
+.header-on-scroll .links-holder a:visited {
+	color: gray !important;
+}
+
 .logo-holder span {
 	color: white;
 }
 
 .logo-holder span#keastone {
 	font-size: 40px;
+	font-family: "Arial" !important;
+	font-weight: 700;
 }
 
 .logo-holder span#careers {
@@ -78,6 +105,13 @@
 	color: white;
 	text-decoration: none !important;
 }
+
+.links-holder a:visited {
+	color: white !important;
+	text-decoration: none !important;
+}
+
+
 
 .padding-right-link {
 	padding-right: 30px;
@@ -261,6 +295,7 @@
 .arrow {
 	display: block;
 	text-align: center;
+	padding-bottom: 10px;
 }
 
 .arrow-image {
@@ -280,9 +315,32 @@
     transform: rotate(180deg);
 }
 
+/*.slideDown.ng-show {
+	animation-name: show;
+  -webkit-animation-name: show;  
+
+  animation-duration: .5s; 
+  -webkit-animation-duration: .5s;
+
+  animation-timing-function: ease-in;  
+  -webkit-animation-timing-function: ease-in;  
+}
+
+.slideDown.ng-hide {
+	animation-name: hide;
+  -webkit-animation-name: hide;  
+
+  animation-duration: .5s; 
+  -webkit-animation-duration: .5s;
+
+  animation-timing-function: ease-in;  
+  -webkit-animation-timing-function: ease-in;  
+}*/
+
 
 .slideDown {
 	width: 100%;
+	/*transition:height 0.35s ease;*/
 }
 
 a.arrow {

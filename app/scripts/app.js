@@ -34,6 +34,15 @@ angular
     };
   })
 
+  .filter('trimContent', function($sce) {
+    return function (value){
+      var str = value;
+      var c = str.indexOf('<p><strong>ROLE DESCRIPTION :</strong></p>');
+      console.log(str.substr(c));
+      return str.substr(c);
+    };
+  })
+
 
   .config(function ($routeProvider) {
     $routeProvider

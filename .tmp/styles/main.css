@@ -8804,4 +8804,9 @@ body {
   }*/
 }
 
+/* line 101, ../../app/styles/main.scss */
+.links-holder a:hover {
+  font-weight: 700 !important;
+}
+
 /*# sourceMappingURL=main.css.map */

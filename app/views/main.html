@@ -1,4 +1,18 @@
-<div class='header-on-scroll display-none'>
+  <div class='header-on-scroll display-none'>
+    <div class='container'>
+          <div class='float-left logo-holder'>
+            <span id='keastone'>
+              Keastone
+            </span>
+            <span id='careers'>
+              Careers
+            </span>
+          </div>
+          <div class='float-right links-holder'>
+            <a href='javascript:void(0);' id='whywe' class='padding-right-link'>Why we</a>
+            <a href='javascript:void(0);' id='toOpenings' >Openings</a>
+          </div>
+    </div>
   </div>
 
   <div class='hero-section'>
@@ -24,8 +38,8 @@
     </div>
   </div>
 
-  <div class='divider'>
-    <p class='text-align-center why-we' id='why-we-section'>
+  <div class='divider' id='why-we-section'>
+    <p class='text-align-center why-we' >
       Why we
     </p>
   </div>
@@ -42,8 +56,7 @@
           </p>
         </div>
       </div>
-      <!-- <div class='col-lg-2 col-md-2 hidden-sm hidden-xs'> -->
-      <!-- </div> -->
+      
       <div class='col-lg-6 col-md-6 col-sm-12 col-xs-12'>
         <div class='second-content'>
           <p>
@@ -114,7 +127,7 @@
             <a ng-click="toggleAccordion();" ng-href='javascript:void(0);' ng-class="{'expandcollapse-heading-collapsed': active, 'expandcollapse-heading-expanded': !active}" ng-show="showArrows" class=' arrow down-arrow' >
               <img class='arrow-image' src='./images/arrow.png'/>
             </a>
-            <a ng-click="toggleAccordion();" ng-href='javascript:void(0);' ng-show="expanded" ng-class="{'expandcollapse-heading-collapsed': active, 'expandcollapse-heading-expanded': !active}" class=' arrow up-arrow' >
+            <a ng-click="toggleAccordion();" ng-href='javascript:void(0);' ng-show="expanded" ng-class="{'expandcollapse-heading-collapsed': active, 'expandcollapse-heading-expanded': !active}" class='arrow up-arrow' >
               <img class='arrow-image' src='./images/arrow.png'/>
             </a>
           </div>
@@ -160,16 +173,40 @@
   </div>
 
   <script>
-    $('#whywe').on('click', function() {
+
+    $('.header-on-scroll #whywe').on('click', function() {
       $('#why-we-section').ScrollTo({
         duration: 1500 
       });
     });
 
-    $('#toOpenings').on('click', function () {
+    $('.header-on-scroll #toOpenings').on('click', function () {
       $('#openings').ScrollTo({
         duration: 1500
       })
-    })
+    });
+    
+    $('.header-initial #whywe').on('click', function() {
+      $('#why-we-section').ScrollTo({
+        duration: 1500 
+      });
+    });
+
+    $('.header-initial #toOpenings').on('click', function () {
+      $('#openings').ScrollTo({
+        duration: 1500
+      })
+    });
+
+
+    // $(window).scroll(function (e) {
+    //   if ( $(this).scrollTop() > 200  ) {
+    //     $('.header-on-scroll').removeClass('display-none');
+    //    } else if ( $(this).scrollTop() <= 200 ) {
+    //       $('.header-on-scroll').addClass('display-none');
+    //   }
+    // });
+
+
 
   </script>

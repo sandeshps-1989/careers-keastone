@@ -27,17 +27,30 @@ angular.module('careersYeomanApp')
     $scope.showArrows = '';
     $scope.expanded = false;
 
-
-
     // Populate all the open positions from recruiterbox 
    	function fetchPositions() {
+   		var dataArray = [];
    		$http({
 			method : 'GET',
 			url : 'https://jsapi.recruiterbox.com/v1/openings?client_name=keastone'
 		})
 		.success(function (data, status, headers, config) {
 			console.log(data);
-			$scope.positions = data.objects;
+			data.objects.forEach(function (record) {
+				// console.log(record);
+				var str = record.description;
+				// console.log(str);
+				var index = str.indexOf('2016!')+5;
+			    // var index = str.substring(str.indexOf('IRIIIS will be'), str.indexOf('2016!'));
+			    // console.log(str.substr(c));
+			    record.description = str.substr(index);
+			    // console.log(record);
+			    dataArray.push(record);
+			    console.log(dataArray);
+
+			});
+			// $scope.positions = data.objects;
+			$scope.positions = dataArray;
 		})
 		.error(function (data, status, headers, config) {
 			console.log(data);
