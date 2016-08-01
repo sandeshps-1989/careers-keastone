@@ -26,6 +26,7 @@ angular.module('careersYeomanApp')
     $scope.arrow = true;
     $scope.showArrows = '';
     $scope.expanded = false;
+    $scope.check_status = false;
 
     // Populate all the open positions from recruiterbox 
    	function fetchPositions() {
@@ -150,6 +151,7 @@ angular.module('careersYeomanApp')
 					$scope.ifMessage = false;
 					$scope.message = "";
 				}, 3000);
+				$scope.check_status = true;
 			}
 			else {
 				$scope.ifMessage = true;
