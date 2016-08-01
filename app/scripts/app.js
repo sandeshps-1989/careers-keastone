@@ -15,8 +15,7 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch',
-    'base64'
+    'ngTouch'
   ])
 
   .filter('renderAsHtml', ['$sce',function($sce) {

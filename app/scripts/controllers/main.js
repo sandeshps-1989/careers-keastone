@@ -8,7 +8,7 @@
  * Controller of the careersYeomanApp
  */
 angular.module('careersYeomanApp')
-  .controller('MainCtrl', function ($http, $scope, $base64) {
+  .controller('MainCtrl', function ($http, $scope, $timeout) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
@@ -18,15 +18,22 @@ angular.module('careersYeomanApp')
 
     var file = '';
     var encoded_data = '';
+    $scope.ifMessage = false;
+    $scope.message = '';
     $scope.active = true;
     $scope.positions = '';
     $scope.user = {};
+    $scope.arrow = true;
+    $scope.showArrows = '';
+    $scope.expanded = false;
+
+
 
     // Populate all the open positions from recruiterbox 
    	function fetchPositions() {
    		$http({
 			method : 'GET',
-			url : 'https://jsapi.recruiterbox.com/v1/openings?client_name=keastone52485'
+			url : 'https://jsapi.recruiterbox.com/v1/openings?client_name=keastone'
 		})
 		.success(function (data, status, headers, config) {
 			console.log(data);
@@ -41,17 +48,58 @@ angular.module('careersYeomanApp')
    fetchPositions();
 
    	$scope.uploadFile = function(event){
-        file = event.target.files;
-        console.log(file[0]);
         var reader = new FileReader();
+        var str = '';
 
-        // reader.onload = function(readerEvt) {
-        // var binaryString = file[0];
-        encoded_data = $base64.encode(reader.readAsText(file[0]));
-        console.log(encoded_data);
-        // console.log(file[0].readAsDataUrl());
-        // };
+        reader.onload = function(readerEvt) {
+	        str = readerEvt.target.result;
+	        // str will have the base64 encoded data, have to strip off 'data/application;base64,'
+	        str = str.substring(str.indexOf(",") + 1);
+	        console.log(str);
+	        encoded_data = str;
+        };
+
+        file = event.target.files;
+        reader.readAsDataURL(file[0]);
     };
+
+
+   $scope.toggleAccordion = function () {
+   		this.active = !this.active;
+   		console.log(this.active);
+   		// Expand the section
+   		if(this.active === false) {
+   			this.expanded = true;
+   			this.showArrows = false;
+   		}
+   		// Shrink the section
+   		else {
+   			this.expanded = false;
+   			this.showArrows = true;
+   		}
+   }
+
+   $scope.showArrow = function () {
+   	// If already expanded, then show the up arrow
+   	if(this.active === false) {
+   		this.showArrows = false;
+   		this.expanded = true;
+   	}
+   	// Not expanded, show the down arrow
+   	else {
+   		this.showArrows = true;
+   		this.expanded = false;
+   	}
+   	// this.showArrows = true;
+   	console.log('here');
+   }
+
+   // Hide all arrows
+    $scope.hideArrow = function () {
+	   	this.showArrows = false;
+	   	this.expanded = false;
+	}
+
 
    // Submit the application by passing the date to recruiter box
    $scope.apply = function (jobId) {
@@ -73,21 +121,41 @@ angular.module('careersYeomanApp')
 		};
 
 		console.log(payload);
-
 		$http({
 			method : 'POST',
-			url: 'https://jsapi.recruiterbox.com/v1/openings/'+jobId+'/apply?client_name=keastone52485',
+			url: 'https://jsapi.recruiterbox.com/v1/openings/'+jobId+'/apply?client_name=keastone',
 			data: JSON.stringify(payload),
 			dataType: 'json',
 			contentType: 'application/json'
 		})
 		.success(function (data, status, headers, config) {
-			console.log(data);
+			console.log(status);
+			if(status == 201) {
+				$scope.ifMessage = true;
+				$scope.message = "Thank you for applying";
+				$timeout(function () {
+					$scope.ifMessage = false;
+					$scope.message = "";
+				}, 3000);
+			}
+			else {
+				$scope.ifMessage = true;
+				$scope.message = "Error! Please try again!";
+				$timeout(function () {
+					$scope.ifMessage = false;
+					$scope.message = "";
+				}, 3000);
+			}
 		})
 		.error(function (data, status, headers, config) {
-			console.log(data);
+			console.log(status);
+			$scope.ifMessage = true;
+			$scope.message = "Error! Please try again!";
+			$timeout(function () {
+				$scope.ifMessage = false;
+				$scope.message = "";
+			}, 3000);
 		});
-
    }	
 
 

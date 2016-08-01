@@ -18,6 +18,10 @@
         </div>
       </div>
     </div>
+    <div class='hero-text container'>
+      <p>
+        We are looking for thinkers and doers
+    </div>
   </div>
 
   <div class='divider'>
@@ -64,7 +68,7 @@
 
   <div id='openings-sections' class='openings-section'>
     <div class='container'>
-      <div id='opening-holder' ng-repeat = 'opening in positions' class='opening-holder'>
+      <div id='opening-holder' ng-repeat = 'opening in positions' class='opening-holder' ng-mouseenter="showArrow();" ng-mouseleave="hideArrow();">
           <div>
             <div class='opening'>
               <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12'>
@@ -74,7 +78,7 @@
                   </p>
                 </div>
                 <div class='float-right'>
-                  <a class='ghost-button' ng-click="active = !active" ng-href='javascript:void(0);' ng-class="{'expandcollapse-heading-collapsed': active, 'expandcollapse-heading-expanded': !active}">Apply</a>
+                  <a class='ghost-button' ng-click="toggleAccordion();" ng-href='javascript:void(0);' ng-class="{'expandcollapse-heading-collapsed': active, 'expandcollapse-heading-expanded': !active}">Apply</a>
                 </div>
               </div>
               <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12'>
@@ -92,20 +96,26 @@
                         <label>Last Name </label>
                         <input type='text' ng-model='user.lastname' required/>
                         <label>Email </label>
-                        <input type='text' ng-model='user.email' required/>
+                        <input id='email' type='email' ng-model='user.email' required/>
                         <label>Phone</label>
                         <input type='text' ng-model='user.contact' required/>
                         <label>Resume </label>
                         <input type="file" id='resume' class="form-control" custom-on-change="uploadFile" ng-model='user.resume' name="resume" base-sixty-four-input required>
                         <button  class='ghost-button'>Apply</button>
-                      <form>
+                        <p ng-show='ifMessage' class='notification-message'>
+                          {{message}}
+                        </p>
+                      </form>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <a ng-click="active = !active" ng-href='javascript:void(0);' ng-class="{'expandcollapse-heading-collapsed': active, 'expandcollapse-heading-expanded': !active}" class='display-none arrow'>
-              <img class='down-arrow arrow-image' src='./images/arrow.png'/>
+            <a ng-click="toggleAccordion();" ng-href='javascript:void(0);' ng-class="{'expandcollapse-heading-collapsed': active, 'expandcollapse-heading-expanded': !active}" ng-show="showArrows" class=' arrow down-arrow' >
+              <img class='arrow-image' src='./images/arrow.png'/>
+            </a>
+            <a ng-click="toggleAccordion();" ng-href='javascript:void(0);' ng-show="expanded" ng-class="{'expandcollapse-heading-collapsed': active, 'expandcollapse-heading-expanded': !active}" class=' arrow up-arrow' >
+              <img class='arrow-image' src='./images/arrow.png'/>
             </a>
           </div>
       </div>
@@ -115,7 +125,7 @@
 
   <div class='footer'>
     <div class='container'>
-      <div class='col-lg-4 col-md-4 col-sm-4 col-xs-12'>
+      <div class='col-lg-4 col-md-4 col-sm-4 col-xs-12 footer-first-section'>
         <h3>
         Mail
         </h3>
@@ -126,7 +136,7 @@
         info@keastone.com
         </p>
       </div>
-      <div class='col-lg-4 col-md-4 col-sm-4 col-xs-12'>
+      <div class='col-lg-4 col-md-4 col-sm-4 col-xs-12 footer-second-section'>
         <h3>
         Web
         </h3>
@@ -134,7 +144,7 @@
         www.keastone.com
         </p>
       </div>
-      <div class='col-lg-4 col-md-4 col-sm-4 col-xs-12'>
+      <div class='col-lg-4 col-md-4 col-sm-4 col-xs-12 footer-third-section'>
         <h3>
         Address
         </h3>
@@ -148,3 +158,18 @@
       </div>
     </div>
   </div>
+
+  <script>
+    $('#whywe').on('click', function() {
+      $('#why-we-section').ScrollTo({
+        duration: 1500 
+      });
+    });
+
+    $('#toOpenings').on('click', function () {
+      $('#openings').ScrollTo({
+        duration: 1500
+      })
+    })
+
+  </script>
