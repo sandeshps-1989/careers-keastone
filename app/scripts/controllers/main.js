@@ -118,6 +118,8 @@ angular.module('careersYeomanApp')
    // Submit the application by passing the date to recruiter box
    $scope.apply = function (jobId) {
 
+   		this.check_status = true;
+
    		var reader = new FileReader();
 
    		var payload = {
@@ -151,11 +153,11 @@ angular.module('careersYeomanApp')
 					$scope.ifMessage = false;
 					$scope.message = "";
 				}, 3000);
-				$scope.check_status = true;
 			}
 			else {
 				$scope.ifMessage = true;
 				$scope.message = "Error! Please try again!";
+				this.check_status = false;
 				$timeout(function () {
 					$scope.ifMessage = false;
 					$scope.message = "";
@@ -166,6 +168,7 @@ angular.module('careersYeomanApp')
 			console.log(status);
 			$scope.ifMessage = true;
 			$scope.message = "Error! Please try again!";
+			this.check_status = false;
 			$timeout(function () {
 				$scope.ifMessage = false;
 				$scope.message = "";

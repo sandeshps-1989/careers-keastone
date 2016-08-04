@@ -49,10 +49,7 @@
       <div class='col-lg-6 col-md-6 col-sm-12 col-xs-12'>
         <div class='first-content'>
           <p>
-            We are building a universal information 
-            management platorm that brings all of your
-            digital information into one place and 
-            gives you access to privileged power.
+            We are building an universal information management platform that brings all of your digital information into one place providing unique ways to organize, manage and colloborate. The platform has it all to be disruptive in its space.
           </p>
         </div>
       </div>
@@ -60,11 +57,8 @@
       <div class='col-lg-6 col-md-6 col-sm-12 col-xs-12'>
         <div class='second-content'>
           <p>
-            We not just execute the mechanics 
-            of our roles, but to execute our roles
-            in such a way so as to deliver a 
-            "better experience" to the beneficiaries
-            of our efforts.
+            Work with the smartest brains there is as we revolutionize the way we manage information. 
+Take on industry leaders as we deliver a better user experience backed by smarter technology. 
           </p>
         </div>
       </div>
@@ -91,7 +85,7 @@
                   </p>
                 </div>
                 <div class='float-right'>
-                  <a class='ghost-button' ng-click="toggleAccordion();" ng-disabled='check_status' ng-href='javascript:void(0);' ng-class="{'expandcollapse-heading-collapsed': active, 'expandcollapse-heading-expanded': !active}">Apply</a>
+                  <a class='ghost-button' ng-click="toggleAccordion();" ng-href='javascript:void(0);' ng-class="{'expandcollapse-heading-collapsed': active, 'expandcollapse-heading-expanded': !active}">Apply</a>
                 </div>
               </div>
               <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12'>
@@ -105,16 +99,16 @@
                     <div class='form-holder'>
                       <form name='submit-form' ng-submit='apply(opening.id);'>
                         <label>First Name</label>
-                        <input type='text' ng-model='user.firstname' required/>
+                        <input type='text' ng-model='user.firstname' maxlength="100" required/>
                         <label>Last Name </label>
-                        <input type='text' ng-model='user.lastname' required/>
+                        <input type='text' ng-model='user.lastname' maxlength="100" required/>
                         <label>Email </label>
-                        <input id='email' type='email' ng-model='user.email' required/>
+                        <input id='email' type='email' ng-model='user.email' oninvalid="this.setCustomValidity('Invalid email')" oninput="this.setCustomValidity('')" required/>
                         <label>Phone</label>
-                        <input type='text' ng-model='user.contact' required/>
+                        <input type='text' ng-model='user.contact' maxlength="10" required/>
                         <label>Resume </label>
-                        <input type="file" id='resume' class="form-control" custom-on-change="uploadFile" ng-model='user.resume' name="resume" base-sixty-four-input required>
-                        <button  class='ghost-button'>Apply</button>
+                        <input type="file" id='resume' class="form-control" custom-on-change="uploadFile" ng-model='user.resume' name="resume" base-sixty-four-input accept="application/msword, application/pdf" required>
+                        <button  ng-disabled='check_status'  class='ghost-button'>Apply</button>
                         <p ng-show='ifMessage' class='notification-message'>
                           {{message}}
                         </p>
@@ -168,6 +162,11 @@
         Bengaluru, Karnataka, <br/>
         Pin: 560038 <br/>
         India
+      </div>
+      <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 footer-last-section'>
+        <p>
+          Copyright 2016 to Keastone
+        </p>
       </div>
     </div>
   </div>

@@ -208,6 +208,12 @@
 	font-size: 16px;
 }
 
+.footer-last-section p {
+	font-family: "Roboto" !important;
+	font-weight: 100;
+	font-size: 16px;
+	margin-top: 10px;
+}
 
 
 .openings-section .opening {
