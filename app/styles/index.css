@@ -86,14 +86,14 @@
 }
 
 .logo-holder span#careers {
-	font-family: "Roboto" !important;
+	/*font-family: "Roboto" !important;*/
 	font-size: 28px;
 	font-weight: 100;
 	text-transform: lowercase;
 }
 
 .links-holder a {
-	font-family: "Roboto" !important;
+	/*font-family: "Roboto" !important;*/
 	font-weight: 400;
 	font-size: 24px;
 	color: white;
@@ -123,7 +123,7 @@
 }
 
 .divider p {
-	font-family: "Roboto" !important;
+	/*font-family: "Roboto" !important;*/
 	font-weight: 100;
 	font-size: 48px;
 	color: gray;
@@ -132,6 +132,7 @@
 .first-content, .second-content {
 	width: 90%;
 	padding: 40px;
+	min-height: 500px;
 	background-color: #f7f7f7;
 }
 
@@ -144,7 +145,7 @@
 
 .hero-text p {
 	font-size: 53px;
-	font-family: "Roboto Condensed" !important;
+	/*font-family: "Roboto Condensed" !important;*/
 	font-weight: 700;
 	color: #ffffff;
 	width: 50%;
@@ -156,7 +157,7 @@
 }
 
 .first-content p, .second-content p {
-	font-family: "Roboto" !important;
+	/*font-family: "Roboto" !important;*/
 	font-weight: 100;
 	font-size: 32px;
 }
@@ -172,44 +173,44 @@
 }
 
 .footer-first-section h3 {
-	font-family: "Roboto" !important;
+	/*font-family: "Roboto" !important;*/
 	font-weight: 100;
 	font-size: 32px;
 }
 
 .footer-first-section p {
-	font-family: "Roboto" !important;
+	/*font-family: "Roboto" !important;*/
 	font-weight: 100;
 	font-size: 16px;
 }
 
 .footer-second-section h3 {
-	font-family: "Roboto" !important;
+	/*font-family: "Roboto" !important;*/
 	font-weight: 100;
 	font-size: 32px;
 }
 
 .footer-second-section p {
 
-	font-family: "Roboto" !important;
+	/*font-family: "Roboto" !important;*/
 	font-weight: 100;
 	font-size: 16px;
 }
 
 .footer-third-section h3 {
-	font-family: "Roboto" !important;
+	/*font-family: "Roboto" !important;*/
 	font-weight: 100;
 	font-size: 32px;
 }
 
 .footer-third-section p {
-	font-family: "Roboto" !important;
+	/*font-family: "Roboto" !important;*/
 	font-weight: 100;
 	font-size: 16px;
 }
 
 .footer-last-section p {
-	font-family: "Roboto" !important;
+	/*font-family: "Roboto" !important;*/
 	font-weight: 100;
 	font-size: 16px;
 	margin-top: 10px;
@@ -229,13 +230,13 @@
 
 
 .opening .title {
-	font-family: "Roboto" !important;
+	/*font-family: "Roboto" !important;*/
 	font-weight: 100;
 	font-size: 24px;
 }
 
 .opening .experience {
-	font-family: "Roboto" !important;
+	/*font-family: "Roboto" !important;*/
 	font-weight: 100;
 	font-size: 19px;
 	padding-bottom: 20px;
@@ -292,7 +293,7 @@
 }
 
 .notification-message {
-	font-family: "Roboto" !important;
+	/*font-family: "Roboto" !important;*/
 	font-weight: 100;
 	padding-top: 20px;
 	color: red;
